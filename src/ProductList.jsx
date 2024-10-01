@@ -249,7 +249,7 @@ const handlePlantsClick = (e) => {
     setShowCart(false);
   };
     const handleAddToCart=(plant)=> {
-        dispatch(addItem(product));
+        dispatch(addItem(plant));
         setAddedToCart({...addedToCart,[plant.name]:true,});
 
    };
