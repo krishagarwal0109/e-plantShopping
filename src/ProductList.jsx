@@ -248,10 +248,10 @@ const handlePlantsClick = (e) => {
     setShowCart(false); // Hide the cart when navigating to About Us
 };
 
-   const handleContinueShopping = (e) => {
-    e.preventDefault();
-    setShowCart(false);
-  };
+//const handleContinueShopping = (e) => {
+    //e.preventDefault();
+    //setShowCart(false);
+  //};
     const handleAddToCart=(plant)=> {
         dispatch(addItem(plant));
         setAddedToCart({...addedToCart,[plant.name]:true,});
@@ -298,7 +298,7 @@ const handlePlantsClick = (e) => {
            ))}
         </div>
 ) :  (
-    <CartItem onContinueShopping={handleContinueShopping}/>
+    <CartItem />
 )}
     </div>
     );
