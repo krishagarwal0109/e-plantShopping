@@ -234,6 +234,7 @@ function ProductList() {
     width: '1100px',
    }
    const styleA={
+    marginLeft: '100px',
     color: 'white',
     fontSize: '30px',
     textDecoration: 'none',

@@ -1,33 +1,103 @@
+/* Main container for the about us section */
 .about-us-container {
-    width: 1000px;
-    /* margin: 0 auto; */
-    /* padding: 20px; */
-    /* background-color: red; */
-    text-align: justify;
-  }
-  
-  .about-us-heading {
-    font-size: 32px;
-    font-weight: bold;
-    color: #333;
-    margin-bottom: 20px;
-  }
-  
-  .about-us-description {
-    font-size: 18px;
-    color: #666;
-    margin-bottom: 30px;
-    text-align: center;
-  }
-  
-  .about-us-content {
-    font-size: 18px;
-    margin-bottom: 20px;
-  }
-  .plant_logo_right{
-    text-align: right;
+  max-width: 1200px; /* Adjust to a reasonable maximum width */
+  margin: 0 auto;    /* Center the container */
+  padding: 20px;
+  box-sizing: border-box; /* Ensure padding is included in width */
+  display: flex;
+  flex-direction: column; /* Flex layout to stack content */
+  justify-content: center;
+  text-align: justify;
+}
+
+/* Heading style */
+.about-us-heading {
+  font-size: 2.5rem;  /* Use responsive units */
+  font-weight: bold;
+  color: #333;
+  margin-bottom: 20px;
+  text-align: center; /* Center the heading */
+}
+
+/* Description style */
+.about-us-description {
+  font-size: 1.25rem; /* Use responsive units */
+  color: #666;
+  margin-bottom: 30px;
+  text-align: center; /* Center the description */
+}
+
+/* Content style */
+.about-us-content {
+  font-size: 1.125rem;
+  color: #333;
+  margin-bottom: 20px;
+  line-height: 1.6;
+}
+
+/* Plant logo right */
+.plant_logo_right {
+  text-align: right;
+}
+
+/* Plant logo left */
+.plant_logo_left {
+  text-align: left;
+}
+
+/* Left section (Welcome and Get Started button) */
+.left-section {
+  flex: 1;  /* Takes up available space */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+}
+
+/* Right section (Text content) */
+.right-section {
+  flex: 2; /* Takes more space than the left */
+  padding: 20px;
+}
+
+/* Get Started button */
+.get-started-button {
+  display: block;
+  background-color: #28a745;
+  color: white;
+  font-size: 1.25rem;
+  padding: 10px 20px;
+  margin-top: 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  text-align: center;
+}
+
+.get-started-button:hover {
+  background-color: #218838; /* Darken on hover */
+}
+
+/* Responsive adjustments for smaller screens */
+@media (max-width: 768px) {
+  .about-us-container {
+    flex-direction: column; /* Stack items vertically on smaller screens */
+    padding: 10px;
   }
 
-  .plant_logo_left{
-    text-align: left;
+  .left-section,
+  .right-section {
+    flex: 1; /* Equal space for both sections */
+    text-align: center; /* Center text and content */
   }
+
+  .about-us-heading {
+    font-size: 2rem;
+  }
+
+  .about-us-description,
+  .about-us-content {
+    font-size: 1rem;
+  }
+}
